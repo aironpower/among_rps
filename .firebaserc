@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "amongrps-2868d": {
+      "hosting": {
+        "amongrps": [
+          "amongrps-2868d"
+        ]
+      }
+    }
+  }
+}
