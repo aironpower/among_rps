@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { FirebaseService } from './firebase.service';
+import { FirebaseService } from './services/firebase.service';
 
 @Component({
   selector: 'app-root',
