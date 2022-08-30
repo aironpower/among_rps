@@ -3,8 +3,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { environment } from 'src/environments/environment';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
+//import { AngularFireModule } from '@angular/fire';
+//import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 import { AppComponent } from './app.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -32,8 +32,8 @@ import { AppRoutingModule } from './app-routing.module';
     MatInputModule,
     FormsModule,
     BrowserAnimationsModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
+    //AngularFireModule.initializeApp(environment.firebase),
+    //AngularFirestoreModule,
     AppRoutingModule
   ],
   providers: [],
