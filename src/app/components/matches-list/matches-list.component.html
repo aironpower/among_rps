@@ -1,0 +1,11 @@
+<br>
+<h1>Current Public Matches</h1>
+
+<mat-card>	
+	<div *ngFor="let match of matches" class="d-flex">
+		<span>{{match.name}}</span>
+		<button class="mat-raised-button">Go to Match</button>
+	</div>
+
+	<div *ngIf="!matches?.length">No public matches</div>
+</mat-card>

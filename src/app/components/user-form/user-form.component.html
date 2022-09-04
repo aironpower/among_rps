@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Define your User</h1>
+
+<div>
+  <mat-form-field class="form-control" [class.mat-form-field-invalid]="!user.pseudo?.length">
+    <mat-label>Pseudo</mat-label>
+    <input matInput type="text" [(ngModel)]="user.pseudo" />
+    <mat-hint *ngIf="!user.pseudo?.length" class="error">You need a pseudo to play the game</mat-hint>
+  </mat-form-field>
+</div>
+
+<div class="form-footer">
+  <button [disabled]="!user.pseudo?.length" mat-raised-button type="submit" (click)="updateUser()">Update User</button>
+</div>

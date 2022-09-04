@@ -1,21 +1,26 @@
 import { Injectable } from '@angular/core';
-//import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
-import { Observable, BehaviorSubject } from 'rxjs';
-
-/*const getObservable = (collection: AngularFirestoreCollection<Task>) => {
-  const subject = new BehaviorSubject<Task[]>([]);
-  collection.valueChanges({ idField: 'id' }).subscribe((val: Task[]) => {
-    subject.next(val);
-  });
-  return subject;
-};*/
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FirebaseService {
-  //players = getObservable(this.store.collection('players')) as Observable<Task[]>;
-  //matches = getObservable(this.store.collection('inProgress')) as Observable<Task[]>;
 
-  constructor(/*private store: AngularFirestore*/) { }
+  private matches:any;
+  private matchCollection:AngularFirestoreCollection<any>;
+
+  constructor(firestore: AngularFirestore) {
+    this.matchCollection = firestore.collection('matches');
+    this.matches = this.matchCollection.valueChanges({ idField: 'matchID' });
+  }
+
+  getMatches() {
+    return this.matches;
+  }
+
+  addMatch(match:any, userMatch:any) {
+    if(userMatch) this.matchCollection.doc(userMatch.matchID).set(match);
+    else this.matchCollection.add(match);
+  }
 }

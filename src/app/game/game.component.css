@@ -1,0 +1,37 @@
+h1 {
+  color: #5eccd6;
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+h2 {
+  color: #698893;
+  font-size: xx-large;
+}
+
+mat-toolbar {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+}
+mat-toolbar button {
+  margin-right: 15px;
+}
+mat-toolbar .app-name {
+  display: flex;
+  align-items: center;
+}
+
+mat-drawer-container {
+  height: calc(100vh - 64px);
+}
+:host ::ng-deep .mat-drawer-content {
+  height: unset!important;
+}
+
+.matches-list {
+  height: 100%;
+  width: 100%;
+  background: #eee;
+  padding: 10px;
+}
