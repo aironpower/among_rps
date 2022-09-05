@@ -48,3 +48,6 @@ Thumbs.db
 
 # firebase cache
 /.firebase
+
+# environment
+/src/environments
