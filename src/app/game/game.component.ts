@@ -60,7 +60,7 @@ export class GameComponent implements OnInit {
   openUserDialog() {
     const dialogRef = this.dialog.open(UserFormComponent, { data: this.user });
 
-    dialogRef.afterClosed().subscribe(result => { console.log(result)
+    dialogRef.afterClosed().subscribe(result => {
       if(result?.pseudo) this.authService.updateUser(result.pseudo);
     });
   }
