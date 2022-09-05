@@ -1,3 +1,2 @@
-## Esto es una cosa to guapa
-
-Estoy probando na mas
+# among_rps
+Multiplayer online game for web with Angular and Firebase
